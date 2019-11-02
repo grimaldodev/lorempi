@@ -1,0 +1,19 @@
+{
+  "name": "fakeapi",
+  "version": "1.0.0",
+  "description": "How to create a easy fake api.",
+  "main": "index.js",
+  "scripts": {
+    "start": "json-server index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@g.github.com:grimaldodev/lorempi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "faker": "^4.1.0"
+  }
+}

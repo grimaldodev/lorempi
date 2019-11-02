@@ -8,7 +8,8 @@ Lets start
 
 Instal global your node packages:
 ```bash
-npm instal -g json-server faker
+npm install -g json-server
+npm install --save faker
 ```
 _**That's it!**_
 
