@@ -41,9 +41,9 @@ Inside the folder `routes` each file with lower dash will respresents a route, l
 var faker = require('faker');
 
 module.exports = function () {
+  var data = [];
   //Iterate many times as you wish
   for (let i = 0; i < 20; i++) {
-    var data = [];
     /**
      * Push an object every iteration
      * executing faker methods filling the keys
