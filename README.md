@@ -9,8 +9,14 @@ Lets start
 Instal global your node packages:
 ```bash
 npm install -g json-server
-npm install --save faker
 ```
+Clone this repo and init
+```bash
+git clone git@github.com:grimaldodev/lorempi.git
+cd lorempi
+npm install
+```
+
 _**That's it!**_
 
 Usage
@@ -18,37 +24,32 @@ Usage
 
 **Setup the server**
 
-To use them, only create a new folder, inside this new folder link the **faker** package, then create a file to export your new api routes, let me use some code to explain.
+Just navigate inside the folder and start the server
 
 ``` bash
-mkdir my-fake-api
-cd my-fake-api
-npm link faker
-touch index.js
+npm start
 ```
-Once you have your _index.js_, open it in any code editor and import the package and export your data object as module
 
-`~/my-fake-api/index.js`
+Customize
+---
+
+Inside the folder `routes` each file with lower dash will respresents a route, like `_users.js` will have the logit to create the users. To create a new route add the file with following the name convention and import the faker module, exports the object and import it into `routes/index.js`.
+
+`~/routes/_[rute-name].js`
 ``` javascript
 //Import the package faker
 var faker = require('faker');
 
-//Each key of this obect represents an enpoint
-const data = {
-  posts: []
-}
-
 module.exports = function () {
-  //Iterate 20 times means, create 20 records
+  //Iterate many times as you wish
   for (let i = 0; i < 20; i++) {
+    var data = [];
     /**
      * Push an object every iteration
      * executing faker methods filling the keys
      **/
-    data.posts.push({
-      _id: faker.random.uuid(),
-      content: faker.lorem.paragraph(),
-      creation: faker.date.past()
+    data.push({
+      ...
     })
   }
   // Once is completed return your new object
@@ -58,7 +59,7 @@ module.exports = function () {
 
 **Run JSON Run!**
 
-Lets test this beauty, in your terminal execute the command `json-server [file-name]` and _voilà!_ you have your new server.
+Lets test this beauty, in your terminal execute the command `npm start` and _voilà!_ you have your new server.
 
 ```bash
 # you can use a specific port!!!
