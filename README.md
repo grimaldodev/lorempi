@@ -1,4 +1,4 @@
-How to create a easy fake api
+How to create a easy fake api in Codeanywhere
 ===
 
 How many times you create google _"json fake api"_ to create a file to emulate some response, I did it a lot until I find 2 nice node pakages **json-server** & **fakerjs** using together you can create a very simple fake api to consume for your PoC _(Prove of Concepts)_
@@ -6,14 +6,16 @@ How many times you create google _"json fake api"_ to create a file to emulate s
 Lets start
 ---
 
-Instal global your node packages:
+Clone this repo on codeanywhere once, enter the projecct
+
 ```bash
-npm install -g json-server
-```
-Clone this repo and init
-```bash
-git clone git@github.com:grimaldodev/lorempi.git
-cd lorempi
+sudo apt update
+#confirm node
+curl -sL https://deb.nodesource.com/setup_10.x -o nodesource_setup.sh
+sudo bash nodesource_setup.sh
+sudo apt-get install nodejs
+nodejs -v
+#v10.17.0
 npm install
 ```
 
@@ -24,7 +26,7 @@ Usage
 
 **Setup the server**
 
-Just navigate inside the folder and start the server
+Just start the server on your ssh console in the projecct
 
 ``` bash
 npm start
@@ -62,8 +64,6 @@ module.exports = function () {
 Lets test this beauty, in your terminal execute the command `npm start` and _voilà!_ you have your new server.
 
 ```bash
-# you can use a specific port!!!
-~/my-fake-api: json-server index.js --port 4000
 
 \{^_^}/ hi!
 
@@ -71,10 +71,12 @@ Lets test this beauty, in your terminal execute the command `npm start` and _voi
   Done
 
   Resources
-  http://localhost:4000/posts
+  http://localhost:3000/comments
+  http://localhost:3000/posts
+  http://localhost:3000/users
 
   Home
-  http://localhost:4000
+  http://localhost:3000
 ```
 
 Conclution
